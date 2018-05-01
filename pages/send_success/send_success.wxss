@@ -1,0 +1,22 @@
+
+.user_box{display: flex;flex-direction:row;
+	justify-content:space-between;align-items:center;width: 690rpx;margin-top: 40rpx;}
+.user_ico{width: 88rpx;height: 88rpx;position: relative;}
+.user_ico .ico_pic{width: 88rpx;height: 88rpx;border-radius: 50%;}
+.userfo{color: #999;width: 450rpx;justify-content:space-between;}
+.username{font-size: 34rpx;letter-spacing: -0.82rpx;line-height: 44rpx;}
+.profession{font-size: 24rpx;}
+.oper{height: 52rpx;}
+.oper button{background: #3380f7;color: #fff;font-size: 28rpx;border-radius: 200rpx;height: 52rpx;line-height: 52rpx;
+     width: 200rpx;}
+.title{font-size: 40rpx;color: #333;width: 690rpx;margin: 30rpx 0 20rpx 0;}
+.time{width: 690rpx;margin-bottom: 30rpx;}
+.user_ico .icon{width: 44rpx;height:44rpx;position: absolute;right:0;bottom: 0;}
+.brief{font-size: 34rpx;color: #333;line-height: 48rpx;}
+.author{width: 690rpx;height: 390rpx;}
+.author image{width: 690rpx;height: 390rpx;}
+.brief{margin-bottom: 15rpx;}
+.share{width: 690rpx;height: 70rpx;position: fixed;bottom: 0;left:50%;margin-left: -345rpx;}
+.share image{width: 32rpx;height: 32rpx;position: absolute;left: 150rpx;top:20rpx;}
+.share button{background: #3380F7;width: 690rpx;height: 70rpx;border-radius: 88rpx;-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;box-sizing: border-box;color: #fff;font-size: 28rpx;line-height: 70rpx;}

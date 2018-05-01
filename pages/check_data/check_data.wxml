@@ -1,0 +1,20 @@
+<view class="container userformtion">
+  <view class="user_con" bindtap="uploadPic">
+    <view class="use_l">头像</view>
+    <view class="use_m">
+      <image src="{{avatar}}" background-size="cover" />
+    </view>
+    <view class="use_r arrow-right arrow-box">
+      <b class="right">
+        <i class="right-arrow1"></i>
+        <i class="right-arrow2"></i>
+      </b>
+    </view>
+  </view>
+  <view class="brinf">简介</view>
+  <!-- <input type="text" class="content" value="{{content}}"  disabled="{{edit}}"/>  -->
+  <form bindsubmit="bindFormSubmit">
+    <textarea placeholder="" name="textarea" class="content" value="{{about}}" bindfocus="focus" />
+    <button form-type="submit" style='width:100%' > 保存 </button>
+  </form>
+</view>

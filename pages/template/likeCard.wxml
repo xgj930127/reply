@@ -1,0 +1,63 @@
+<template name="likeCard">
+  <view>
+    <view class='card-container'>
+      <navigator url="../others/others?userId={{post.userId}}" hover-class="none">
+        <view class='card-userInfo'>
+
+          <view style='position:relative'>
+            <image class='card-avatar' src="{{post.avatar}}"  mode='aspectFill' />
+            <image wx:if="{{post.isV==1}}" class='card-v' src='../../image/like_vip.png'></image>
+          </view>
+
+          <view class='card-userInfo_info'>
+            <view>
+              <text class='card-nikeName'>{{post.nickname}}</text>
+            </view>
+            <view>
+              <text wx:if="{{post.tagdesc}}" class='card-tag'>{{post.tagdesc}}</text>
+              <block wx:if="{{post.province || post.city}}">
+                <image class='card-location' src='../../image/like_location.png'></image>
+                <text class='card-tag' style='margin-left:0'>{{post.province}}</text>
+                <text class='card-tag' style='margin-left:0'>{{post.city}}</text>
+              </block>
+            </view>
+          </view>
+        </view>
+      </navigator>
+
+      <navigator url="../details/details?postId={{post.id}}" hover-class="none">
+        <view wx:if="{{post.image}}" class='card-content_Img'>
+
+          <view class='card-content_left'>
+            <view>
+              <text class='card-title_two'>{{post.title}}</text>
+            </view>
+            <view style='width:100%;bottom:0;position:absolute'>
+              <text class='card-other'>{{post.commentNum}}评论</text>
+              <text class='card-other'>{{post.praiseNum}}赞</text>
+              <text class='card-other'></text>
+            </view>
+          </view>
+          <image style='width:220rpx;height:160rpx;' mode="aspectFill"  src='{{post.image}}'></image>
+        </view>
+        <view wx:else class='card-content'>
+          <view>
+            <text class='card-title_one'>{{post.title}}</text>
+
+          </view>
+          <view>
+            <text class='card-content'>{{post.text}}</text>
+
+          </view>
+          <view style='margin-top:20rpx;position:relative'>
+            <text class='card-other'>{{post.commentNum}}评论</text>
+            <text class='card-other'>{{post.praiseNum}}赞</text>
+            <text class='card-other'>{{post.turnNum}}转发</text>
+          </view>
+        </view>
+      </navigator>
+    </view>
+
+    <view class='divider'></view>
+  </view>
+</template>

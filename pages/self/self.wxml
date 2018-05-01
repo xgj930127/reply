@@ -1,0 +1,77 @@
+<import src="../template/likeCard.wxml" />
+
+<view>
+
+  <scroll-view scroll-y enable-back-to-top bindscrolltolower="lower" lower-threshold="100" style="height:{{height?height+'px':'auto'}}">
+
+    <view class='header'>
+      <view class='info'>
+        <view style='position:relative;'>
+          <image class='avatar' src="{{info.avatar}}" mode='aspectFill' />
+          <image wx:if="{{info.isV==1}}" class='avatar-v' src='../../image/like_vip.png'></image>
+        </view>
+        <view style="display: flex;flex-direction: column; align-items: flex-end">
+          <view>
+            <navigator url="../check_data/check_data" hover-class="none">
+            <text class='nickname'>{{info.nickname}}</text>
+          
+            <image class='edit' src='../../image/self_icon.png'></image>
+            </navigator>
+          </view>
+          <view>
+
+            <image wx:if="{{info.province || info.city}}" class='location-img' src='../../image/like_location.png'></image>
+            <text class='location'>{{info.province}}</text>
+            <text class='location-center'>{{info.city}}</text>
+            <text wx:if="{{info.tagdesc}}" class='location'>{{info.tagdesc}}</text>
+
+          </view>
+        </view>
+      </view>
+
+      <view>
+        <text class='about'>{{info.about}}</text>
+      </view>
+
+      <view style='display:flex'>
+        <navigator url='../fansList/fansList?type=follow&id={{info.userId}}' hover-class="none">
+          <view style='display:flex;flex-direction: column;align-items: center'>
+
+            <text class='count'>{{info.follow}}</text>
+            <text class='count-desc'>关注</text>
+
+          </view>
+        </navigator>
+        <navigator url="../fansList/fansList?type=fan&id={{info.userId}}" hover-class="none">
+          <view style='display:flex;flex-direction: column;align-items: center;margin-left:80rpx'>
+            <text class='count'>{{info.fans}}</text>
+            <text class='count-desc'>粉丝</text>
+          </view>
+        </navigator>
+      </view>
+
+      <view class="divider1"></view>
+
+      <view style='margin-bottom:20rpx'>
+        <text class='other'>文章 </text>
+        <text class='other'>{{info.postNum}} </text>
+
+        <text class='other' style='margin-left:40rpx'>赞 </text>
+        <text class='other'>{{info.praiseNum}} </text>
+
+        <text class='other' style='margin-left:40rpx'>浏览 </text>
+        <text class='other'>{{info.watchNum}} </text>
+      </view>
+
+
+    </view>
+
+    <view class='divider2'></view>
+
+    <block wx:for="{{items}}" wx:key="{{item.id}}">
+      <template is="likeCard" data="{{post:item}}"
+      />
+    </block>
+
+  </scroll-view>
+</view>

@@ -1,0 +1,26 @@
+.cropper-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  background-color: #e5e5e5;
+  overflow: hidden;
+}
+
+.cropper-buttons {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  background-color: rgba(0, 0, 0, 0.95);
+  color: #04b00f;
+  z-index: 999
+}
+
+.cropper-buttons .upload, .cropper-buttons .getCropperImage {
+  width: 50%;
+  text-align: center;
+}

@@ -1,0 +1,47 @@
+
+
+<view class="sendmessage">
+  <textarea type="text" placeholder="请输入标题" placeholder-style="color:#CCCCCC;font-size: 40rpx;" class="title" auto-height="true" bindblur="titleBindblur" value='{{titleInput}}'> </textarea>
+  <view style='background:#EFEFF4;height:1px;margin-left:36rpx;margin-right:36rpx;'></view>
+  <view wx:if="{{isHiddenTopTextarea==1}}">
+    <textarea type="text" placeholder="我的正文从这里开始" placeholder-style="color:#CCC;font-size: 34rpx;" class="content" bindfocus="bindfocus" bindblur="bindblur" maxlength="-1"> </textarea>
+  </view>
+  <block wx:for="{{list}}" wx:for-index="idx" wx:for-item="itemName">
+    <view wx:if="{{itemName.widgetType=='img'}}" class="imgs">
+      <image src="{{itemName.imgSrc}}" data-hi="{{itemName.index}}" class="img_list" mode="widthFix" ></image>
+      <view class="close" bindtap="remove" id="{{idx}}">
+        <image src="../../image/close.png" />
+      </view>
+    </view>
+    <view wx:elif="{{itemName.widgetType=='video'}}" class='videos'>
+      <video src="{{itemName.videoSrc}}" class="video_list"> </video>
+      <view class="close" bindtap="remove" id="{{idx}}">
+        <image src="../../image/close.png" />
+      </view>
+    </view>
+    <view wx:else>
+      <textarea type="text" value="{{itemName.text}}" placeholder="" placeholder-style="color:#CCCCCC;font-size: 34rpx;" class="content" bindblur="bindblur" auto-height="{{itemName.auto_height}}" maxlength="-1" data-hi="{{itemName.index}}" id="{{idx}}" bindinput="bindinput" >
+      </textarea>
+    </view>
+  </block>
+  <view wx:if="{{isHiddenBottomTextarea==1}}">
+
+    <textarea type="text" value="{{bottomText}}" placeholder="" placeholder-style="color:#CCCCCC;font-size: 34rpx;" class="contentBottom"  bindblur="bindblur" maxlength="-1"> </textarea>
+  </view>
+  <view class='bottomView'></view>
+</view>
+
+
+<view class="addPic">
+    <image src="../../image/add.png" bindtap="addBtn" class="addBtn" animation="{{animationRotate}}"/>
+    <image src='../../image/img_pic.png' bindtap='chooseImg' animation="{{animationData}}"/>
+    <image src="../../image/video.png" bindtap="chooseVideo" animation="{{animationData2}}"/>
+</view>
+
+
+<button bindtap="sendBtn" class="sendBtn {{showSend?'show':'hide'}}">发布</button>
+
+<view  class="share {{showShare?'show':''}}">
+     <image src="../../image/icon06.png" />
+     <button data-name="shareBtn" open-type="share">发表成功！马上分享给好友</button>
+</view>

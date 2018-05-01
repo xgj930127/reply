@@ -1,0 +1,141 @@
+@import "../template/likeCard.wxss"
+
+
+.header {
+  padding-top: 40rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.avatar {
+  width: 132rpx;
+  height: 132rpx;
+  border-radius: 132rpx;
+}
+
+.avatar-v {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 60rpx;
+  border-width: 5rpx;
+  border-color: white;
+  position: absolute;
+  right: -10rpx;
+  bottom: 10rpx;
+}
+
+.nickname {
+  font-size: 34rpx;
+  color: #333;
+  line-height: 1.16em;
+  font-weight: 900;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  -webkit-text-overflow: ellipsis;
+  -moz-text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.edit {
+  width: 36rpx;
+  height: 36rpx;
+  padding-left: 20rpx;
+}
+
+.location-img {
+  width: 13rpx;
+  height: 15rpx;
+  margin-right: 15rpx;
+}
+
+.location {
+  font-size: 24rpx;
+  color: #333;
+  line-height: 44rpx;
+}
+
+.location-center {
+  font-size: 24rpx;
+  color: #333;
+  line-height: 44rpx;
+  margin-left: 20rpx;
+  margin-right: 40rpx;
+}
+
+.about {
+  margin-top: 14rpx;
+  margin-bottom: 30rpx;
+  font-size: 26rpx;
+  color: #999;
+  line-height: 1.3em;
+}
+
+.count {
+  font-size: 40rpx;
+  color: #002e6c;
+  font-weight: 900;
+}
+
+
+
+.follow {
+  position: absolute;
+  right: 0;
+  background-color: #3380f7;
+  color: white;
+  font-size: 24rpx;
+  border-radius: 100rpx;
+  padding: 10rpx 30rpx
+}
+
+.followed {
+  position: absolute;
+  right: 0;
+  background-color: white;
+  color: #ccc;
+  font-size: 24rpx;
+  border-radius: 100rpx; 
+  border: 1rpx solid #E6E6E6 ;
+  padding: 10rpx 30rpx
+}
+
+
+
+.count-desc {
+  font-size: 24rpx;
+  color: #ccc;
+}
+
+.divider1 {
+  width: 100%;
+  color: #e2e5e9;
+  height: 1px;
+  background-color: #e2e5e9;
+  margin: 20rpx 0;
+}
+
+.other:first-child {
+  margin-left: 0;
+}
+
+.other {
+  font-size: 28rpx;
+  color: #999;
+  margin-left: 8rpx;
+}
+
+.divider2 {
+  height: 20rpx;
+  width: 100%;
+  color: #e2e5e9;
+  background-color: #e2e5e9;
+}

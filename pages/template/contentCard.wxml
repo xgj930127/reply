@@ -1,0 +1,17 @@
+<template name="contentCard">
+  <view>
+    <view wx:if="{{item.widgetType=='text'}}" class='content-text'>
+      <text class='content'>{{item.text}}</text>
+    </view>
+    <view wx:elif="{{item.widgetType=='img'}}" class="img_con">
+      <image mode="widthFix" lazy-load class='content content-img' src='{{item.imgUrl}}'></image>
+    </view>
+    <view wx:else class="img_con">
+      <video mode="widthFix" class='content content-img' src='{{item.videoUrl}}'></video>
+    </view>
+    <!-- <view wx:elseif="{{item.widgetType=='video'}}">
+        <image class='content-text' src='{{item.imgSrc}}'></image> 
+      </view> -->
+
+  </view>
+</template>

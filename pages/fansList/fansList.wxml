@@ -1,0 +1,18 @@
+<import src="../template/attentionPeople.wxml" />
+
+<scroll-view scroll-y style="height:{{height}}" >
+  <block wx:for="{{list}}" wx:for-index="idx" wx:for-item="itemName">
+    <view wx:if="{{type == 'follow'}}">
+      <navigator url="../others/others?userId={{itemName.followUserId}}" hover-class="none">
+        <template is="attentionPeople" data="{{isAttention: itemName.followState,index:idx,userImg:itemName.followAvatar,userName:itemName.followNickName,userDes:itemName.about}}" />
+      </navigator>
+    </view>
+    <view wx:else>
+      <navigator url="../others/others?userId={{itemName.fansUserId}}" hover-class="none">
+
+        <template is="attentionPeople" data="{{isAttention: itemName.followState,index:idx,userImg:itemName.fansAvatar,userName:itemName.fansNickName,userDes:itemName.about}}" />
+      </navigator>
+
+    </view>
+  </block>
+</scroll-view>

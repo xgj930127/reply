@@ -1,0 +1,12 @@
+<view class="container send_article">
+  <view class="title">{{title}}</view>
+  <block wx:for="{{send_article}}" wx:key="*this">
+      <view class="article_list">
+         <view class="data">{{index}}{{items.content}}</view>
+         <view class="pic">
+            <image src="http://tvax2.sinaimg.cn/crop.144.35.355.355.180/006u8dduly8fp2vx0x5ilj30hs0hsmyz.jpg" />
+         </view>
+      </view>
+  </block>
+  <button bindtap="sendArticle" class="button">发布</button>
+</view>

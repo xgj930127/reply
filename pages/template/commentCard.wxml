@@ -1,0 +1,56 @@
+<import src="commentInnerCard.wxml" />
+<template name="commentCard">
+  <view class="comment_container">
+    <view>
+      <image class='comment_avatar' src="{{comment.avatar}}" background-size="cover" />
+    </view>
+
+    <view class="comment_content">
+      <view style='width:100%'>
+
+        <view class="comment_nickname">{{comment.nickname}}</view>
+        <view class="comment_content">{{comment.content}}</view>
+        <view class="comment_other">
+          <view class="comment_time">{{comment.ctime}}</view>
+          <view bindtap='commentAt' data-post-Id="{{comment.postId}}" data-comment-Id='{{comment.id}}' data-replay-Id="{{comment.id}}" hover-class='commentAt' data-replay-UserId="{{comment.userId}}" data-nickname='{{comment.nickname}}'>
+            <text>回复 · </text>
+          </view>
+
+          <view id="{{comment.id}}" data-praisstate="{{comment.commentPraisState == '1'}}" data-type='1' catchtap="praiseReplay">
+            <view wx:if="{{comment.commentPraisState == '1'}}">
+              <image class="comment_praised" src="../../image/prais_checked.png" />
+              <text class="comment_praised">{{comment.praiseNum}}</text>
+            </view>
+            <view wx:else="{{replay.commentPraisState == '1'}}">
+              <image class="comment_praise" src="../../image/prais_normal.png" />
+              <text class="comment_praise">{{comment.praiseNum}}</text>
+            </view>
+
+          </view>
+        </view>
+      </view>
+
+      <view wx:if="{{isShowInComment}}" class="comment_box">
+        <block wx:for="{{comment.replayList}}" wx:key="{{item.commentId}}">
+          <template is="commentInner" data="{{replay:item,commentId:item.commentId}}" />
+        </block>
+        <view class="comment_more" wx:if="{{comment.hasMore}}" catchtap='commentMore' id='{{comment.id}}'>更多评论
+          <image src="../../image/pink_more.png" />
+        </view>
+      </view>
+      <view wx:elif="{{comment.replayList.length>0}}" class="comment_box-inDetail">
+        <block wx:for="{{comment.replayList}}" wx:key="{{item.commentId}}">
+          <view>
+            <text class='comment_nickname-inDetail'>{{item.nickname}}:</text>
+            <text class='comment_content-inDetail'>{{item.content}}</text>
+          </view>
+        </block>
+        <navigator url="../comment/comment?postId={{comment.postId}}" hover-class="none">
+          <view class="comment_more-inDetail" wx:if="{{comment.hasMore}}">全部回复 >
+          </view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+
+</template>

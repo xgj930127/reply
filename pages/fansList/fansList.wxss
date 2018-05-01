@@ -1,0 +1,67 @@
+.userIcon {
+  width: 88rpx;
+  height: 88rpx;
+  margin-top: 40rpx;
+  margin-left: 30rpx;
+  border-radius: 88rpx;
+}
+
+.userName {
+  position: absolute;
+  margin-left: 24rpx;
+  margin-top: 40rpx;
+  font-family: SFUIText-Medium;
+  font-size: 17px;
+  color: #999;
+  height: 46rpx;
+  margin-right: 200rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 60%;
+}
+
+.userDes {
+  position: absolute;
+  margin-left: 24rpx;
+  margin-top: 90rpx;
+  margin-right: 200rpx;
+  font-family: PingFangSC-Regular;
+  font-size: 24rpx;
+  color: #999;
+  height: 44rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 60%;
+}
+
+.attentionState, .cancelAttentionState {
+  position: absolute;
+  width: 160rpx;
+  height: 52rpx;
+  font-family: PingFangSC-Regular;
+  font-size: 22rpx;
+  color: #ccc;
+  background-color: white;
+  right: 15rpx;
+  top: 58rpx;
+  border-radius: 26rpx;
+  border: 2rpx solid #e6e6e6;
+  line-height: 50rpx;
+}
+
+.attentionState {
+  background-color: #3380f7;
+  border: none;
+  color: #fff;
+}
+
+button::after {
+  border: none;
+}
+
+.list {
+  position: relative;
+  height: 128rpx;
+}

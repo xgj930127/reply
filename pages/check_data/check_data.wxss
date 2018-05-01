@@ -1,0 +1,106 @@
+.user_con {
+  width: 690rpx;
+  margin: 40rpx auto 60rpx;
+  height: 132rpx;
+  display: flex;
+}
+
+.user_con view {
+  justify-content: center;
+}
+
+.use_l {
+  height: 132rpx;
+  font-size: 34rpx;
+  color: #999;
+  letter-spacing: -0.82rpx;
+  line-height: 132rpx;
+  width: 480rpx;
+}
+
+.use_m {
+  width: 132rpx;
+  height: 132rpx;
+  margin-right: 40rpx;
+}
+
+.use_m image {
+  width: 132rpx;
+  height: 132rpx;
+  border-radius: 50%;
+}
+
+.use_r {
+  width: 17rpx;
+  height: 17rpx;
+}
+
+.brinf {
+  width: 690rpx;
+  margin: 0 30rpx;
+  font-size: 34rpx;
+  color: #999;
+}
+
+.save {
+  width: 690rpx;
+  margin: 30rpx auto 0;
+}
+
+form button {
+  width: 160rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin-left: 0;
+  color: #fff;
+  background: #3380f7;
+  display: block;
+}
+
+.content {
+  font-size: 28rpx;
+  line-height: 40rpx;
+  width: 690rpx;
+  margin: 20rpx auto;
+  color: #999;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.arrow-box {
+  width: 60rpx;
+  height: 30rpx;
+  margin-top: 30px;
+  position: relative;
+}
+
+.right {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.right-arrow1, .right-arrow2 {
+  width: 0;
+  height: 0;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-top: 10px transparent dashed;
+  border-right: 10px transparent dashed;
+  border-bottom: 10px transparent dashed;
+  border-left: 10px white solid;
+  overflow: hidden;
+}
+
+.right-arrow1 {
+  left: 1px; /*重要*/
+  border-left: 10px #999 solid;
+}
+
+.right-arrow2 {
+  border-left: 10px white solid;
+}

@@ -1,0 +1,61 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/send/send",
+    "pages/cropper/cropper",
+    "pages/self/self",
+    "pages/others/others",
+    "pages/check_data/check_data",
+    "pages/send_success/send_success",
+    "pages/send_article/send_article",
+    "pages/details/details",
+    "pages/test/test",
+    "pages/login/login",
+    "pages/logs/logs",
+    "pages/comment/comment",
+    "pages/fansList/fansList"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#FFF",
+    "navigationBarTitleText": "点赞小站",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#FFF"
+  },
+  "tabBar": {
+    "color": "#AAAAAA",
+    "selectedColor": "#3380F7",
+    "borderStyle": "black",
+    "backgroundColor": "#FFFFFF",
+    "list": [
+      {
+        "index": 0,
+        "pagePath": "pages/index/index",
+        "text": "推荐",
+        "iconPath": "image/tabbar_recommend_normal.png",
+        "selectedIconPath": "image/tabbar_recommend_select.png"
+      },
+      {
+        "index": 1,
+        "pagePath": "pages/send/send",
+        "iconPath": "image/tabbar_send_normal.png",
+        "selectedIconPath": "image/tabbar_send_select.png",
+        "text": "发布"
+      },
+      {
+        "index": 2,
+        "pagePath": "pages/self/self",
+        "iconPath": "image/tabbar_self_normal.png",
+        "selectedIconPath": "image/tabbar_self_select.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

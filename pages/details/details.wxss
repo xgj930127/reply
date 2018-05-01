@@ -1,0 +1,133 @@
+@import "../template/likeCard.wxss";
+@import "../template/commentCard.wxss";
+@import "../template/contentCard.wxss";
+
+.user_info {
+  margin: 36rpx 30rpx 28rpx 30rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+
+.user_avatar {
+  width: 88rpx;
+  height: 88rpx;
+  border-radius: 88rpx;
+  margin-right: 24rpx;
+}
+
+.user_nickname {
+  font-size: 34rpx;
+  color: #999;
+  line-height: 22rpx;
+}
+
+.user_tagdesc {
+  font-size: 24rpx;
+  color: #999;
+  margin-top: 15rpx;
+}
+
+.follow {
+  position: absolute;
+  right: 0;
+  background-color: #3380f7;
+  color: white;
+  font-size: 24rpx;
+  border-radius: 100rpx;
+  padding: 10rpx 30rpx;
+}
+
+.followed {
+  position: absolute;
+  right: 0;
+  background-color: white;
+  color: #ccc;
+  font-size: 24rpx;
+  border-radius: 100rpx;
+  border: 1rpx solid #e6e6e6;
+  padding: 10rpx 30rpx;
+}
+
+.title {
+  font-size: 40rpx;
+  color: #333;
+  font-weight: 999;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+
+.time {
+  font-size: 12px;
+  color: #999;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+
+.comment_title {
+  padding: 20rpx 30rpx;
+  display: flex;
+  align-items: center;
+}
+
+.comment_img {
+  width: 16rpx;
+  height: 24rpx;
+  margin-left: 14rpx;
+}
+
+.divider_low {
+  height: 1px;
+  color: #e2e5e9;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  background-color: #e2e5e9;
+}
+
+.comment-empty {
+  padding: 60rpx 0;
+  color: #999;
+  font-size: 28rpx;
+  width: 100%;
+  text-align: center;
+}
+
+.bottom {
+  display: flex;
+  padding: 10rpx 30rpx;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+  position: fixed;
+  height: 90rpx;
+  box-sizing: border-box;
+  z-index: 100
+}
+
+.bottom-img {
+  width: 26rpx;
+  height: 26rpx;
+}
+
+.bottom-text {
+  margin-left: 20rpx;
+  font-size: 26rpx;
+  color: #aaa;
+}
+
+.bottom-share {
+  font-size: 28rpx;
+  color: #fff;
+  background-color: #3380f7;
+  border-radius: 100rpx;
+  position: absolute;
+  right:30rpx;
+  bottom: 10rpx;
+}
+
+.temp-contenet{
+  width: 100%;
+}

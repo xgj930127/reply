@@ -1,0 +1,13 @@
+<!--pages/test/test.wxml-->
+<import src="../template/likeCard.wxml" />
+
+<view>
+  <view style='background:#EFEFF4;height:1px;width:100%'></view>
+  <scroll-view scroll-y enable-back-to-top bindscrolltolower="lower" lower-threshold="100" style="height:{{height?height+'px':'auto'}}">
+    <block wx:for="{{items}}" wx:key="{{item.id}}">
+      <template is="likeCard" data="{{post:item}}"
+      />
+    </block>
+  </scroll-view>
+
+</view>

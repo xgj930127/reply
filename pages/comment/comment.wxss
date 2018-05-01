@@ -1,0 +1,52 @@
+@import "../template/commentCard.wxss";
+
+.scroll {
+  padding: 20rpx 0;
+  height: 1000rpx;
+}
+
+.bottom {
+  display: flex;
+  background-color: white;
+  padding: 5rpx 24rpx;
+  position: abslove;
+  bottom: 0;
+  height: 100rpx;
+}
+
+.avatar {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 60rpx;
+  margin-right: 24rpx;
+}
+
+.text {
+  font-size: 28rpx;
+  background: #fff;
+  border: 2rpx solid #e2e5e9;
+  border-radius: 12rpx;
+  flex: 1;
+ 
+  width: 100%;
+  height: 68rpx;
+ line-height: 68rpx;
+ padding-left: 10rpx;
+  white-space: nowrap;
+}
+
+.holder {
+  
+  font-size: 28rpx;
+  color: #ccc;
+  line-height: 68rpx;
+}
+
+
+.comment-empty {
+  padding: 60rpx 0;
+  color: #999;
+  font-size: 28rpx;
+  width: 100%;
+  text-align: center;
+}

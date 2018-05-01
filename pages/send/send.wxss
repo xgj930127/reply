@@ -1,0 +1,211 @@
+.title {
+  margin-left: 36rpx;
+  margin-right: 36rpx;
+  color: #333;
+  font-size: 40rpx;
+  height: 128rpx;
+  font-family: PingFangSC-Medium;
+  margin-bottom: 20rpx;
+}
+
+.contentBottom, .content {
+  margin-left: 36rpx;
+  margin-right: 36rpx;
+  margin-top: 20rpx;
+  color: #333;
+  font-size: 34rpx;
+  height: 600rpx;
+}
+
+.imgBtn {
+  position: fixed;
+  right: 12rpx;
+  right: 30rpx;
+  bottom: 220rpx;
+  width: 44rpx;
+  height: 32rpx;
+  z-index: 100;
+}
+
+.videoBtn {
+  position: fixed;
+  right: 12rpx;
+  bottom: 150rpx;
+  width: 44rpx;
+  height: 32rpx;
+  z-index: 100;
+}
+
+.bottomView {
+  height: 200rpx;
+}
+
+.sendmessage message {
+  font-size: 28rpx;
+  color: #101010;
+  padding-left: 10rpx;
+}
+
+.sendmessage button {
+  display: none;
+}
+
+.message {
+  margin: 20rpx 0 0 30rpx;
+  line-height: 50rpx;
+  font-size: 34rpx;
+  color: #ccc;
+  padding-left: 20rpx;
+}
+
+.title .form {
+  width: 700rpx;
+  height: 340rpx;
+  border: 1px solid #ccc;
+  margin: 0 auto;
+}
+
+.title .form image {
+  width: 700rpx;
+  height: 340rpx;
+}
+
+.sendBtn {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 90rpx;
+  line-height: 90rpx;
+  color: #fff;
+  background: #3380f7;
+  box-shadow: 0 0 16rpx 0;
+  font-size: 34rpx;
+  z-index: 20;
+  font-size: 34rpx;
+  z-index: 20;
+  border-radius: 0;
+  font-family: 'PingFangSC-Regular';
+}
+
+.addPic {
+  position: fixed;
+  right: 10rpx;
+  bottom: 220rpx;
+  width: 200rpx;
+  height: 240rpx;
+}
+
+.addPic image {
+  width: 72rpx;
+  height: 72rpx;
+  position: absolute;
+  right: 0;
+  top: 80rpx;
+  z-index: 4;
+}
+
+.addPic .addBtn {
+  z-index: 5;
+}
+
+.close {
+  position: absolute;
+  width: 52rpx;
+  height: 52rpx;
+  top: 0;
+  right: 0;
+}
+
+.close image {
+  width: 52rpx;
+  height: 52rpx;
+}
+
+.addPic {
+  position: fixed;
+  right: 10rpx;
+  bottom: 220rpx;
+  width: 200rpx;
+  height: 240rpx;
+  z-index: 30;
+}
+
+.addPic image {
+  width: 72rpx;
+  height: 72rpx;
+  position: absolute;
+  right: 0;
+  top: 80rpx;
+  z-index: 4;
+}
+
+.addPic .addBtn {
+  z-index: 5;
+  transition: transform 1000ms ease 0ms;
+  transform: rotate(45deg);
+  transform-origin: 50% 50% 0px;
+}
+
+.imgs, .videos {
+  margin: 20rpx 40rpx 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.imgs .img_list {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.video_list {
+  display: block;
+  width: 690rpx;
+  height: 390rpx;
+}
+
+.close {
+  position: absolute;
+  width: 52rpx;
+  height: 52rpx;
+  top: 0;
+  right: 0;
+  z-index: 8;
+}
+
+.close image {
+  width: 52rpx;
+  height: 52rpx;
+}
+
+.share {
+  width: 690rpx;
+  height: 70rpx;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  margin-left: -345rpx;
+}
+
+.share image {
+  width: 32rpx;
+  height: 32rpx;
+  position: absolute;
+  left: 140rpx;
+  top: 20rpx;
+  z-index: 4;
+}
+
+.share button {
+  background: #3380f7;
+  width: 690rpx;
+  height: 70rpx;
+  border-radius: 88rpx;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 28rpx;
+  line-height: 70rpx;
+}

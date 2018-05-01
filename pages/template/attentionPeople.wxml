@@ -1,0 +1,11 @@
+<template name="attentionPeople">
+  <view class='list'>
+    <image class='userIcon' src="{{userImg}}"></image>
+    <label class='userName'>{{userName}}</label>
+    <label class='userDes'>{{userDes}}</label>
+    <button class='attentionState'  data-hi="{{index}}"   catchtap="attentionClick" wx:if="{{isAttention == 0}}">关注
+    </button>
+    <button class='cancelAttentionState' data-hi="{{index}}" catchtap='attentionClick' wx:elif="{{isAttention == 1}}">取消关注
+    </button>
+  </view>
+</template>

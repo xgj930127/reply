@@ -1,0 +1,32 @@
+<view class="container success">
+  <view class="user_box">
+  		<view class="user_ico view1">
+  			<image src="{{avatar}}" background-size="cover" class="ico_pic"/>
+        <image wx:if="{{isV==1}}" src="../../image/link_vip.png" class="icon" />
+  		</view>
+      <view class="userfo view1">  
+	        <view class="username">{{username}}</view>
+	        <view class="profession">{{profession}}</view>
+      </view>  
+      <view class="oper view1">
+          <button bindtap="cancalBtn">{{buttonText}}</button>
+      </view>
+  </view>	
+
+	<view class="title">{{title}}</view>
+	<view class="time">2小时前 发表</view>
+
+  <block wx:for="{{article_list}}">
+      <view class="article_list">
+        	<view class="brief">{{brief}}</view>
+        	<view class="author">
+             <image src="{{src}}" /> 
+          </view>
+      </view>
+  </block>
+	  
+  <view class="share">
+     <image src="../../image/icon06.png" />
+     <button bindtap="{{shareBtn}}">发表成功！马上分享给好友</button>
+  </view>
+</view>

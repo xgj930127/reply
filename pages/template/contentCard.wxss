@@ -1,0 +1,18 @@
+.content {
+  margin-top: 28rpx;
+}
+
+.content-text {
+  font-size: 34rpx;
+  color: #333;
+  line-height: 1.5em;
+  margin: 28rpx 30rpx;
+}
+
+.img_con{
+  padding: 0 30rpx;
+}
+.content-img {
+  width:100%;
+  display:block
+}

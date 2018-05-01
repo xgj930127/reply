@@ -1,0 +1,7 @@
+
+.title{font-size: 56rpx;color: #333;border-bottom: 2rpx solid #333;margin: 0 10rpx;height: 120rpx;line-height: 120rpx;}
+.article_list{margin: 12.7% 4.5% 0 4.8%;}
+.article_list .data{color: #333;line-height: 48rpx;}
+.article_list .pic{width: 690rpx;height: 390rpx;}
+.article_list .pic image{width: 690rpx;height: 390rpx}
+.button{width:100%;height: 90rpx;background: #3380F7;line-height: 90rpx;font-size: 34rpx;color: #fff;position: fixed;bottom:0;}

@@ -1,0 +1,106 @@
+<!--logs.wxml-->
+<import src="../template/likeCard.wxml" />
+<import src="../template/commentCard.wxml" />
+<import src="../template/contentCard.wxml" />
+
+<view>
+
+  <scroll-view scroll-y enable-back-to-top style="height:100%">
+    <navigator url="../others/others?userId={{post.userId}}" hover-class="none">
+      <view class='user_info'>
+        <image class="user_avatar" src='{{post.avatar}}'></image>
+        <view style='display:flex;flex-direction: column; justify-content: center;'>
+          <text class='user_nickname'>{{post.nickname}}</text>
+          <text class='user_tagdesc'>{{post.tagdesc}}</text>
+        </view>
+        <view wx:if="{{post.followState == '1'}}" class='followed' catchtap='cancelFollow'> 已关注</view>
+        <view wx:else class='follow' catchtap='addFollow'>关注</view>
+      </view>
+    </navigator>
+
+    <view>
+      <text class='title'>{{post.title}}</text>
+    </view>
+    <view>
+      <text class='time'>{{post.ctime}} 发表</text>
+    </view>
+
+    <block wx:for="{{post.content}}" wx:key="item.id">
+      <template class="temp-contenet" is="contentCard" data="{{item:item}}" />
+    </block>
+    <view style='height:30rpx'></view>
+    <view class='divider'></view>
+    <!--  热门评论  -->
+
+    <view>
+      <view class='comment_title'>
+        <text style='font-size: 28rpx;color: #333333;'>热门评论</text>
+        <text style='flex:1' />
+        <navigator url="../comment/comment?postId={{post.id}}" hover-class="none">
+          <text style='font-size: 24rpx;color: #666;'>共{{post.commentNum}}条评论</text>
+          <image class='comment_img' src='../../image/comment_more.png'></image>
+        </navigator>
+      </view>
+      <view class='divider_low'></view>
+
+      <view wx:if="{{commentList.length!=0}}">
+        <block wx:for="{{commentList}}" wx:key="item.id">
+          <template is="commentCard" data="{{comment:item}}" />
+        </block>
+      </view>
+
+
+      <navigator wx:else url="../comment/comment?postId={{post.id}}" hover-class="none">
+        <view class='comment-empty'>添加第一条评论</view>
+      </navigator>
+    </view>
+
+
+    <view class='divider'></view>
+    <!--  相关推荐  -->
+
+    <view>
+      <view class='comment_title'>
+
+        <text style='font-size: 28rpx;color: #333333;'>相关推荐</text>
+      </view>
+      <view class='divider_low'></view>
+      <block wx:for="{{postList}}" wx:key="{{item.id}}">
+        <template is="likeCard" data="{{post:item}}" />
+      </block>
+    </view>
+
+
+    <view style='height:90rpx'>
+    </view>
+
+  </scroll-view>
+
+
+  <view class='bottom'>
+
+
+
+    <view id="{{post.id}}" data-praisstate="{{post.praiseState == '1'}}" data-type='0' catchtap="praise">
+      <view wx:if="{{post.praiseState == '1'}}">
+        <image class="bottom-img" src="../../image/prais_checked.png" />
+        <text class="bottom-text">{{post.praiseNum}}</text>
+      </view>
+      <view wx:else>
+        <image class="bottom-img" src="../../image/prais_normal.png" />
+        <text class="bottom-text">{{post.praiseNum}}</text>
+      </view>
+    </view>
+
+    <navigator url="../comment/comment?postId={{post.id}}" style="margin-left:40rpx" hover-class="none">
+      <image class='bottom-img' src='../../image/detail_comment.png'></image>
+      <text class='bottom-text'>{{post.commentNum}}</text>
+    </navigator>
+
+
+    <button class='bottom-share' open-type="share" bindtap='share'>
+      <image class='bottom-img' src='../../image/detail_share.png' /> 好文要分享</button>
+
+  </view>
+
+</view>
